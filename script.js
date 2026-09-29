@@ -19,7 +19,7 @@ function getUserId() {
 let acertos = 0;
 let currentQuestionIndex = 0;
 let respondido = false;
-let questions = []; // 10 perguntas sorteadas a cada rodada
+questions = shuffle(perguntas);
 
 // =============================================
 // PERGUNTAS

@@ -19,7 +19,7 @@ function getUserId() {
 let acertos = 0;
 let currentQuestionIndex = 0;
 let respondido = false;
-questions = shuffle(perguntas);
+let questions = []; // todas as perguntas do banco
 
 // =============================================
 // PERGUNTAS
@@ -81,7 +81,8 @@ function startGame() {
   acertos = 0;
   currentQuestionIndex = 0;
   respondido = false;
-  questions = shuffle(perguntas).slice(0, 10); // sorteia 10 do banco
+  historicoRodada = [];
+  questions = shuffle(perguntas); // todas as 35 perguntas embaralhadas
   showScreen('game-screen');
   mostrarQuestao();
 }
